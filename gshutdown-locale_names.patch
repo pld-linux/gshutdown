@@ -1,0 +1,12 @@
+diff -urN gshutdown-0.2rc1.orig/configure gshutdown-0.2rc1/configure
+--- gshutdown-0.2rc1.orig/configure	2007-02-11 17:59:45.904925250 +0100
++++ gshutdown-0.2rc1/configure	2007-02-11 18:00:32.039808500 +0100
+@@ -5286,7 +5286,7 @@
+ 
+ 
+ # Gettext
+-ALL_LINGUAS="fr es ca sv pt de da hu ru it no"
++ALL_LINGUAS="fr es ca sv pt de da hu ru it"
+ GETTEXT_PACKAGE=gshutdown
+ 
+ 
