@@ -1,6 +1,6 @@
 %define	rel	rc1
 Summary:	Advanced shutdown utility
-Summary(pl.UTF-8):   Zaawansowane narzędzie do restartowania
+Summary(pl.UTF-8):	Zaawansowane narzędzie do restartowania
 Name:		gshutdown
 Version:	0.2
 Release:	0.%{rel}.1
