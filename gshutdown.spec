@@ -6,7 +6,7 @@ Version:	0.2
 Release:	0.%{rel}.1
 License:	GPL v2
 Group:		Applications/System
-Source0:	http://gshutdown.tuxfamily.org/release/gshutdown-0.2rc1.tar.gz
+Source0:	http://gshutdown.tuxfamily.org/release/%{name}-%{version}%{rel}.tar.gz
 # Source0-md5:	f3b3c3eb86a4f18765bc30134a8a1464
 Patch0:         %{name}-locale_names.patch
 URL:		http://gshutdown.tuxfamily.org/
@@ -19,6 +19,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 GShutdown is an advanced shutdown utility which allows you to schedule
 the shutdown, the restart of your computer of the logout.
+
+%description -l pl.UTF-8
+GShutdown to zaawansowane narzędzie do zamykania systemu pozwalające
+zaplanować zamknięcie lub restart komputera przy wylogowaniu.
 
 %prep
 %setup -q -n %{name}-%{version}%{rel}
@@ -36,19 +40,12 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-
-%find_lang gshutdown --with-gnome
+%find_lang %{name} --with-gnome
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post
-
-%preun
-
-%postun
-
-%files -f gshutdown.lang
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/*
