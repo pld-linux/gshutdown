@@ -26,7 +26,7 @@ zaplanować zamknięcie lub restart komputera przy wylogowaniu.
 
 %prep
 %setup -q -n %{name}-%{version}%{rel}
-%patch0 -p1
+%patch -P0 -p1
 
 rm -f po/no.*
 
